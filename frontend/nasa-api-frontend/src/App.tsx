@@ -121,7 +121,7 @@ export default function App() {
               variant="outline"
               className="w-full border-white/40 bg-black text-white hover:bg-white hover:text-black"
             >
-              Ver imagen en tamaño completo
+              Click here to see the image
             </Button>
           </CardFooter>
         )}
