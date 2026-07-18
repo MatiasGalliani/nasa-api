@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"nasa-api/handlers"
+	"nasa-api/middleware"
 
 	"github.com/joho/godotenv"
 )
@@ -14,11 +15,11 @@ func main() {
 		log.Fatal("There is some error with environment variables")
 	}
 
-	http.HandleFunc("GET /apod", handlers.ApodHandler)
+	mux := http.NewServeMux()
+	mux.HandleFunc("GET /apod", handlers.ApodHandler)
 
 	log.Println("Server running on :8000")
-	err := http.ListenAndServe(":8000", nil)
-	if err != nil {
+	if err := http.ListenAndServe(":8000", middleware.CORS(mux)); err != nil {
 		log.Fatal(err)
 	}
 }
