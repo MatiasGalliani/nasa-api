@@ -21,6 +21,8 @@ type Apod = {
   date: string;
 };
 
+const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
+
 export default function App() {
   const [apod, setApod] = useState<Apod | null>(null);
   const [loading, setLoading] = useState(false);
@@ -32,12 +34,10 @@ export default function App() {
     setApod(null);
 
     try {
-      const res = await fetch("http://localhost:8000/apod");
-
+      const res = await fetch(`${API_URL}/apod`);
       if (!res.ok) {
         throw new Error(`Server status response: ${res.status}`);
       }
-
       const data: Apod = await res.json();
       setApod(data);
     } catch (err) {
