@@ -115,13 +115,13 @@ export default function App() {
         {apod && (
           <CardFooter>
             <Button
-              asChild
+              render={
+                <a href={apod.url} target="_blank" rel="noopener noreferrer" />
+              }
               variant="outline"
               className="w-full border-white/40 bg-black text-white hover:bg-white hover:text-black"
             >
-              <a href={apod.url} target="_blank" rel="noopener noreferrer">
-                See full size image
-              </a>
+              Ver imagen en tamaño completo
             </Button>
           </CardFooter>
         )}
