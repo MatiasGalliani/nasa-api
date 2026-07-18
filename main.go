@@ -12,7 +12,7 @@ import (
 
 func main() {
 	if err := godotenv.Load(); err != nil {
-		log.Fatal("There is some error with environment variables")
+		log.Println("No .env found")
 	}
 
 	mux := http.NewServeMux()
