@@ -119,7 +119,7 @@ export default function App() {
                 <a href={apod.url} target="_blank" rel="noopener noreferrer" />
               }
               variant="outline"
-              className="w-full border-white/40 bg-black text-white hover:bg-white hover:text-black hover:bg-white"
+              className="w-full border-white/40 bg-black text-white hover:!bg-white hover:text-black"
             >
               Click here to see the image
             </Button>
