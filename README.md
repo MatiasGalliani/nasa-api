@@ -1,6 +1,6 @@
-Welcome to the nasa-apod-project project!
+Welcome to the nasa-apod-project!
 
-I developed this project to practice my skills with GO on the backend and Typescript on the frontend.
+I developed this app to practice my skills with GO on the backend and Typescript on the frontend.
 
 I am an astronomy enthusiast and I love to check out Nasa's APOD often, so I thought, why not building a simple webapp where I can just see it in just two clicks.
 
